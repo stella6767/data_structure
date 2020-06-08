@@ -24,5 +24,17 @@
     <ClCompile Include="고객대기열관리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="binary tree2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="binary tree3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bst-version2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="도서관리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
