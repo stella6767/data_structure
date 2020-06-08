@@ -1,5 +1,3 @@
-#include<iostream>
-using namespace std;
 
 //모든 노드의 키는 유일하다. 
 //// 중복된 데이터를 갖는 노드가 없다는 뜻이다. 여기서 키의 의미는 노드 안에 들어 있는 데이터 값을 의미한다.
@@ -12,50 +10,11 @@ using namespace std;
 //출처: https://mattlee.tistory.com/30 [waca's field]
 
 
+#include "node.h"
+#include "bst.h"
+#include<iostream>
+using namespace std;
 
-class node { //bst tree
-public:
-	node() {
-		d_ = 0; p_ = 0; l_ = 0; r_ = 0;
-	}
-	node(int d, node* p = 0, node* l = 0, node* r = 0) {
-		d_ = d;
-		p_ = p;
-		l_ = l;
-		r_ = r;
-	}
-	// private:
-	int d_;
-	node* p_; //부모노드와 연결해주는 포인터
-	node* l_;
-	node* r_;
-};
-
-class bst {
-public:
-	bst() { root_ = 0; };
-	bst(node* root) { root_ = root; };
-	~bst();
-	bool Search(int el);
-	void Insert(int el);
-	bool Delete(int x);
-	void PreOrderTraversal() { PreOrderTraversal(root_); };
-	void InOrderTraversal() { InOrderTraversal(root_); };
-	void PosteOrderTraversal() { PostOrderTraversal(root_); };
-protected:
-	node* Search(node* ptr, int el);
-	void Insert(node* ptr, int el);
-	node* DeleteByMerging(node* ptr);
-	//  node * DeleteByCopying(node * ptr);
-	virtual void visit(node* ptr) {
-		cout << "node " << ptr->d_ << " is visited" << endl; // underscore 추가
-	};
-	void PreOrderTraversal(node* ptr);
-	void InOrderTraversal(node* ptr);
-	void PostOrderTraversal(node* ptr);
-private:
-	node* root_;//  "_" <- 이게 맴버변수라고 구분하라는 의미같음
-};
 
 bool bst::Search(int el) {
 	if (Search(root_, el) != 0) return true;
@@ -153,33 +112,6 @@ void bst::PostOrderTraversal(node* ptr) {
 	PostOrderTraversal(ptr->r_);
 	visit(ptr);
 };
-
-int main() {
-	bst* bt = new bst();
-
-	bt->Insert(4);
-	bt->Insert(2);
-	bt->Insert(3);
-	bt->Insert(1);
-	bt->Insert(6);
-	bt->Insert(5);
-	bt->Insert(7);
-	bt->Insert(10);
-	bt->Insert(8);
-	bt->Insert(9);
-	bt->PreOrderTraversal();
-
-	cout << "10,7,6,4, 삭제 후 전위 순회" << endl;
-	bt->Delete(10);
-	bt->Delete(7);
-	bt->Delete(6); //ctrl+d 한줄복사후 아래이동
-	bt->Delete(4); 
-	bt->PreOrderTraversal();
-	cout << "중위순회" << endl;
-	bt->InOrderTraversal();
-	cout << "후위순회" << endl;
-	bt->PosteOrderTraversal();
-}
 
 
 //비주얼 이진탐색트리 https://www.cs.usfca.edu/~galles/visualization/BST.html
