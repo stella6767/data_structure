@@ -21,7 +21,7 @@
     <ClCompile Include="Binary Search Tree.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="고객대기열관리.cpp">
+    <ClCompile Include="도서관리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="binary tree3.cpp">
@@ -39,6 +39,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="헤더.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="node.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
