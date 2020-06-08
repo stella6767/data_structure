@@ -1,6 +1,18 @@
 #include<iostream>
 using namespace std;
 
+//모든 노드의 키는 유일하다. 
+//// 중복된 데이터를 갖는 노드가 없다는 뜻이다. 여기서 키의 의미는 노드 안에 들어 있는 데이터 값을 의미한다.
+//왼쪽 서브 트리의 키들은 루트의  키보다 작다. 
+//// 예를 들어 루트노드의 데이터가 5라고 하면, 왼쪽 서브트리에는 무조건 5보다 작은 값들만 존재해야 한다.
+//오른쪽 서브 트리의 키들은 루트의 키보다 크다. 
+//// 위와 같은 원리로 오른쪽에는 루트의 데이터 값보다 더 큰 값들만 존재한다.
+//왼쪽과 오른쪽 서브 트리도 이진 탐색 트리이다. 
+//// 순환적으로 정의되었다는 뜻이다. 즉 왼쪽 서브트리로 내려가든, 오른쪽 서브트리로 내려가든 동일한 법칙이 적용된다는 뜻이다.
+//출처: https://mattlee.tistory.com/30 [waca's field]
+
+
+
 class node { //bst tree
 public:
 	node() {
@@ -42,7 +54,7 @@ protected:
 	void InOrderTraversal(node* ptr);
 	void PostOrderTraversal(node* ptr);
 private:
-	node* root_;//_이게 맴버변수라고 구분하라는 의미같음
+	node* root_;//  "_" <- 이게 맴버변수라고 구분하라는 의미같음
 };
 
 bool bst::Search(int el) {
@@ -168,3 +180,6 @@ int main() {
 	cout << "후위순회" << endl;
 	bt->PosteOrderTraversal();
 }
+
+
+//비주얼 이진탐색트리 https://www.cs.usfca.edu/~galles/visualization/BST.html
