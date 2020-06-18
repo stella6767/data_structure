@@ -45,7 +45,7 @@ int main() {
 	arrInt3 cube(d1, d2, d3);
 
 	for (int i = 0; i < 3; i++) {
-		cin >> x >> y >> z >> v;
+		cin >> x >> y >> z >> v; //x,y,z 번지에 v를 집어넣어라.....
 		cube.SetAt(x, y, z, v);
 	}
 

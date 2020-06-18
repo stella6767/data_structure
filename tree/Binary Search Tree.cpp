@@ -107,7 +107,7 @@ node* bst::DeleteByMerging(node* ptr) { //이해가 안 가는게 자식 노드의 parent 포
 	}
 	node* tptr = ptr->l_; //왼쪽으로 한 번 이동
 	while (tptr->r_ != 0) { tptr = tptr->r_; }//삭제할 노드의 왼쪽노드의 오른쪽 자식노드가 0이 아니라면 계속 오른쪽으로 깊이탐색
-	if (tptr->p_ == 0) { //루트노드를 삭재시 시행되는 함수
+	if (tptr->p_ == 0) { //루트노드를 삭제시 시행되는 함수
 		tptr->r_ = ptr->r_;  //그냥 다 싸그리 간선 변경
 		tptr->p_ = ptr->p_; 
 		tptr->p_->r_ = ptr->r_;  
