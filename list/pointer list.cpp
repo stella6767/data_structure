@@ -132,7 +132,7 @@ list::getat(int index) {
 }
 
 int
-list::index(int key) {
+list::index(int key) { //값의 위치찾기
     node* ptr = lst_;
     int idx = 0;
     while (ptr != 0) {

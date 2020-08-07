@@ -15,24 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="queue.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="graph.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="adjacency matrix.cpp">
+    <ClCompile Include="..\..\..\..\Downloads\sola.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="adjacency list.cpp">
+    <ClCompile Include="..\..\..\..\Downloads\solc.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="heap.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="hash.cpp">
+    <ClCompile Include="..\..\..\..\Downloads\solb.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
