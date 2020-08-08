@@ -15,13 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Downloads\sola.cpp">
+    <ClCompile Include="soola.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Downloads\solc.cpp">
+    <ClCompile Include="soolc.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Downloads\solb.cpp">
+    <ClCompile Include="soolb.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
